@@ -54,7 +54,7 @@ module.exports = (env) => {
         // local server config
         devServer: {
             contentBase: path.join(__dirname, 'public'),
-            historyApiFallback: true,
+            historyApiFallback: true, // em caso de 404 serve o index 
             publicPath: '/dist/'
         },
         // css extract plugin config

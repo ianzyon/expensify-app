@@ -24,7 +24,7 @@ export class EditExpensePage extends React.Component {
 };
 const mapStateToProps = (state, props) =>{
     return {
-        expense: state.expenses.find((expense) => { return expense.id === props.expense.id})
+        expense: state.expenses.find((expense) => { return expense.id === props.match.params.id})
     }
 };
 const mapDispatchToProps = (dispatch, props) => {

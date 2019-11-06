@@ -23,7 +23,7 @@ const store = configureStore();
 // store.dispatch(addExpense({description: 'Conta do Aluguel', amount: 109500, createdAt: 1000}));
 // // store.dispatch(editExpense(store.getState().expenses[1].id,{description: 'Conta do Aluguel Mod', amount: 2000, createdAt: 1800}));
 // // const visible = getVisibleExpenses(store.getState().expenses, store.getState().filters);
-// // console.log(store.getState());
+console.log(store.getState());
 // // console.log(visible);
 
 // Setando o Store via provider

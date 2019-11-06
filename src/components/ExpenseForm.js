@@ -76,7 +76,6 @@ export default class ExpenseForm extends React.Component {
             });
         } else {
             // Clear the error
-            console.log('submitted with no errors');
             this.setState(()=>{
                 return {
                     error: ''

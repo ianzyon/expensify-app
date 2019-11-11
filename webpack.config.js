@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-
+// CODIGO QUE ALTERA A VARIAVEL DE AMBIENTE PARA MUDAR O DATABASE USADO
 if (process.env.NODE_ENV == 'test') {
 	require('dotenv').config({ path: '.env.test' });
 } else if (process.env.NODE_ENV == 'development') {
@@ -60,7 +60,7 @@ module.exports = (env) => {
         // css extract plugin config
         plugins: [
             CSSExtract,
-            new webpack.DefinePlugin({
+            new webpack.DefinePlugin({ //passando os valores das enviroments
                 'process.env.FIREBASE_API_KEY': JSON.stringify(process.env.FIREBASE_API_KEY),
                 'process.env.FIREBASE_AUTH_DOMAIN': JSON.stringify(process.env.FIREBASE_AUTH_DOMAIN),
                 'process.env.FIREBASE_DATABASE_URL': JSON.stringify(process.env.FIREBASE_DATABASE_URL),

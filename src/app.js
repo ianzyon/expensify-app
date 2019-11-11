@@ -15,6 +15,7 @@ import { addExpense, editExpense, removeExpense } from './actions/expenses';
 import { setTextFilter, setStartDate, setEndDate, sortByDate, sortByAmount } from './actions/filters';
 // redux - selector
 import getVisibleExpenses from './selectors/expenses-sel';
+import './firebase/firebase';
 
 const store = configureStore();
 
